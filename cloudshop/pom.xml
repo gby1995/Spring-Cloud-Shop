@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com</groupId>
+  <artifactId>cloudshop</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.2.RELEASE</version>
+    </parent>
+    <modules>
+    <module>shop-server</module>
+    <module>shop-agent</module>
+    <module>shop-api</module>
+    <module>shop-center</module>
+    <module>shop-common</module>
+    <module>shop-gate</module>
+    <module>shop-monitor</module>
+    <module>shop-ui</module>
+    <module>shop-login</module>
+    <module>shop-product</module>
+    <module>shop-order</module>
+    <module>shop-orders</module>
+    <module>shop-hystrix</module>
+    <module>shop-gateway</module>
+  </modules>
+    <packaging>pom</packaging>
+    <!--依赖管理，用于管理spring-cloud的依赖，其中Camden.SR3是版本号-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Camden.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
